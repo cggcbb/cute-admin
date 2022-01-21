@@ -1,6 +1,11 @@
 node_modules
+
+# mac系统隐藏文件
 .DS_Store
+
 dist
 dist-ssr
+
 *.local
+
 .vscode
