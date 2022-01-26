@@ -13,11 +13,14 @@
 import { MenuUnfoldOutlined as foldIcon } from '@vicons/antd'
 
 import useSetting from '../../../store/setting'
+import useTheme from '../../../store/theme'
 
 const setting = useSetting()
+const theme = useTheme()
 
 const toggleFold: () => void = () => {
   setting.changeCollapsed(!setting.collapsed)
+  theme.changeThemeDark(!theme.dark)
 }
 </script>
 <style lang="less" scoped>
@@ -36,7 +39,6 @@ const toggleFold: () => void = () => {
   height: @logoHeight;
   padding: 0 10px;
   font-size: 26px;
-  transition: transform @transitionTime;
   &:hover {
     cursor: pointer;
     color: var(--primary-color);

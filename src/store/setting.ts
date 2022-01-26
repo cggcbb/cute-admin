@@ -4,12 +4,16 @@ const useSetting = defineStore({
   id: 'setting',
   state: () => {
     return {
-      collapsed: false
+      collapsed: false,
+      menuWidth: 210
     }
   },
   actions: {
     changeCollapsed(collapsed: boolean) {
       this.collapsed = collapsed
+    },
+    changeMenuWidth(menuWidth: number) {
+      this.menuWidth = menuWidth
     }
   }
 })

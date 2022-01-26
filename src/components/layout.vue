@@ -4,29 +4,14 @@
       <n-dialog-provider>
         <n-grid>
           <n-gi :span="24">
+            <n-layout-header class="layout-header-wrapper">
+              <my-header></my-header>
+              <nav-bar></nav-bar>
+            </n-layout-header>
             <n-layout has-sider>
-              <n-layout-sider
-                bordered
-                collapse-mode="width"
-                :collapsed-width="64"
-                :width="240"
-                :collapsed="collapsed"
-              >
-                <my-header></my-header>
-                <div class="scrollbar">
-                  <n-scrollbar>
-                    <n-menu
-                      :collapsed-width="64"
-                      :collapsed-icon-size="22"
-                      :options="menuOptions"
-                      :accordion="true"
-                      @update:value="handleMenuUpdate"
-                    />
-                  </n-scrollbar>
-                </div>
-              </n-layout-sider>
+              <sider />
               <n-layout>
-                <main-layout></main-layout>
+                <main-layout :isDark="isDark"></main-layout>
               </n-layout>
             </n-layout>
           </n-gi>
@@ -37,63 +22,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref, h } from 'vue'
-import { darkTheme, NIcon } from 'naive-ui'
-import { useRouter } from 'vue-router'
-import {
-  DashboardOutlined as DashBoardIcon,
-  SettingOutlined as SettingIcon,
-  UnorderedListOutlined as ListIcon
-} from '@vicons/antd'
-import { storeToRefs } from 'pinia'
-import MyHeader from '@/components/header/index.vue'
+import { computed, ComputedRef } from 'vue'
+import { darkTheme } from 'naive-ui'
+
 import MainLayout from '@/components/main.vue'
-import useSetting from '../store/setting'
+import Sider from '@/components/sider/index.vue'
+import useTheme from '../store/theme'
+import MyHeader from '@/components/header/index.vue'
+import NavBar from '@/components/navBar/index.vue'
 
-const theme: any = ref(null)
+const store = useTheme()
 
-// theme.value = darkTheme
-
-const renderIcon = icon => {
-  return () => h(NIcon, null, { default: () => h(icon) })
-}
-
-const menuOptions = [
-  {
-    label: 'Axios',
-    key: 'axios',
-    path: '/axios',
-    icon: renderIcon(DashBoardIcon)
-  },
-  {
-    label: 'naive',
-    key: 'naive',
-    path: '/naive',
-    icon: renderIcon(SettingIcon)
-  },
-  {
-    label: 'pinia',
-    key: 'pinia',
-    path: '/pinia',
-    icon: renderIcon(ListIcon)
-  }
-]
-
-const router = useRouter()
-
-const handleMenuUpdate = (key, item) => {
-  router.push({
-    path: `${item.path}`
-  })
-}
-
-const store = useSetting()
-const { collapsed } = storeToRefs(store)
+const isDark: ComputedRef<boolean> = computed(() => store.dark)
+const theme: any = computed(() => (isDark.value ? darkTheme : {}))
 </script>
 
 <style lang="less" scoped>
-@import '@/assets/styles/variables.less';
-.scrollbar {
-  height: calc(100vh - 48px) !important;
+.layout-header-wrapper {
+  display: flex;
 }
 </style>

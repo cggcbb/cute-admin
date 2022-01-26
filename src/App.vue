@@ -14,6 +14,10 @@ import NaiveProvider from '@/components/naive-provider/index.vue'
 :root {
   --border-color: #000;
   --primary-color: #18a058;
-  --menu-width: 66px;
+  --menu-width: 210px;
+}
+
+body {
+  transition: background 0.3s linear;
 }
 </style>

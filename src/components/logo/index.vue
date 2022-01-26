@@ -1,14 +1,13 @@
 <template>
   <div class="logo-wrapper">
     <img v-if="showLogo" class="logo-img" src="../../assets/logo.png" />
-    <div class="title" :class="[collapsed ? 'close-title' : 'show-title']">
+    <div class="title" :class="[setting.collapsed ? 'close-title' : 'show-title']">
       <span class="logo-title">{{ projectName }}</span>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { storeToRefs } from 'pinia'
 import useSetting from '../../store/setting'
 
 defineProps({
@@ -30,8 +29,7 @@ defineProps({
   }
 })
 
-const store = useSetting()
-const { collapsed } = storeToRefs(store)
+const setting = useSetting()
 </script>
 <style lang="less" scoped>
 @import '@/assets/styles/variables.less';
