@@ -10,3 +10,7 @@ declare module '*.vue' {
 declare interface Window {
   $message: any
 }
+
+declare module '@vicons/antd'
+
+declare module '@vicons/utils'

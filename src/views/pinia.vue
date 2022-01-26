@@ -1,9 +1,11 @@
 <template>
-  <div class="section">
-    <n-button @click="increment(1)" type="info" secondary strong size="small">increment</n-button>
+  <div>
+    <div class="section">
+      <n-button @click="increment(1)" type="info" secondary strong size="small">increment</n-button>
+    </div>
+    <div>counter: {{ counter }}</div>
+    <div>doubleCounter: {{ doubleCounter }}</div>
   </div>
-  <div>counter: {{ counter }}</div>
-  <div>doubleCounter: {{ doubleCounter }}</div>
 </template>
 
 <script setup lang="ts">

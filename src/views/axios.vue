@@ -1,5 +1,7 @@
 <template>
-  <n-button @click="send" :loading="loading">send http to github</n-button>
+  <div>
+    <n-button @click="send" :loading="loading">send http to github</n-button>
+  </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'

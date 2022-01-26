@@ -20,8 +20,10 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-absolute-path': 'off',
+    'import/first': 'off',
     'vue/no-multiple-template-root': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/no-export-in-script-setup': 'off',
     'no-unused-expressions': 'off',
     'no-param-reassign': [
       'error',

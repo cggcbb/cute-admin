@@ -5,6 +5,8 @@ const Naive = () => import('@/views/naive.vue')
 const Pinia = () => import('@/views/pinia.vue')
 const Axios = () => import('@/views/axios.vue')
 
+const Layout = () => import(/** layout */ '@/components/layout.vue')
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -14,7 +16,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: '/home',
-    component: Home
+    component: Layout,
+    redirect: '/axios',
+    children: [
+      {
+        path: '/axios',
+        component: Axios
+      },
+      {
+        path: '/naive',
+        component: Naive
+      },
+      {
+        path: '/pinia',
+        component: Pinia
+      }
+    ]
   },
   {
     path: '/naive',

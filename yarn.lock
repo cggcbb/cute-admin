@@ -1011,6 +1011,11 @@
     "@typescript-eslint/types" "5.9.1"
     eslint-visitor-keys "^3.0.0"
 
+"@vicons/antd@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@vicons/antd/-/antd-0.11.0.tgz#3d28952d028aed712dca61cb81dbdb11454c5542"
+  integrity sha512-XRkUMJzfjr3Q5S6xbAg4ALI90DIGNhZdbVW6SejFi6EgxB5bts3YMMcM4HbF77vdQX5bhxgju3Hd3uP97OgvAQ==
+
 "@vitejs/plugin-vue@^2.0.0":
   version "2.0.1"
   resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-2.0.1.tgz"
@@ -4267,10 +4272,10 @@ mute-stream@0.0.7:
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.7.tgz"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-naive-ui@^2.23.2:
-  version "2.23.2"
-  resolved "https://registry.npmjs.org/naive-ui/-/naive-ui-2.23.2.tgz"
-  integrity sha512-x5XtoJrfMcBGqkryJ6RPg3hB7xDqbO+5TfDB1UGIaVsj2fsidn9S9a6yK/jXqKbw+h5h97NqOu+Lf5EH8tAIog==
+naive-ui@^2.24.6:
+  version "2.24.6"
+  resolved "https://registry.yarnpkg.com/naive-ui/-/naive-ui-2.24.6.tgz#544a50ee627b8c95a744e24b4d5862abf2fcf390"
+  integrity sha512-8eK9os7gruxBfhzvbXoUn8ok/jBc1T+PWhoW1Je0Ou446XsyHsZ9B5vZMQQ4w29C3dVc7OBfeIm/vTq5rLnVBw==
   dependencies:
     "@css-render/plugin-bem" "^0.15.8"
     "@css-render/vue3-ssr" "^0.15.8"
@@ -4287,9 +4292,9 @@ naive-ui@^2.23.2:
     seemly "^0.3.3"
     treemate "^0.3.9"
     vdirs "^0.1.7"
-    vfonts "^0.1.0"
+    vfonts "^0.0.3"
     vooks "^0.2.12"
-    vueuc "^0.4.19"
+    vueuc "^0.4.24"
 
 nanoid@^3.1.30:
   version "3.1.30"
@@ -5694,11 +5699,6 @@ vfonts@^0.0.3:
   resolved "https://registry.npmjs.org/vfonts/-/vfonts-0.0.3.tgz"
   integrity sha512-nguyw8L6Un8eelg1vQ31vIU2ESxqid7EYmy8V+MDeMaHBqaRSkg3dTBToC1PR00D89UzS/SLkfYPnx0Wf23IQQ==
 
-vfonts@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/vfonts/-/vfonts-0.1.0.tgz"
-  integrity sha512-vQBcvntBlnAPonAkGNM8iJ9NxE3PucA+V2W95xiN75YJKxirLJvOws2kEyOEO45T4N+YTbQOCR2m77Y05pfVhQ==
-
 vite@^2.7.2:
   version "2.7.10"
   resolved "https://registry.npmjs.org/vite/-/vite-2.7.10.tgz"
@@ -5908,10 +5908,10 @@ vue@^3.2.25:
     "@vue/server-renderer" "3.2.26"
     "@vue/shared" "3.2.26"
 
-vueuc@^0.4.19:
-  version "0.4.19"
-  resolved "https://registry.npmjs.org/vueuc/-/vueuc-0.4.19.tgz"
-  integrity sha512-mzhYwv60cldElLolvG5sMsDFNMP1+vQbxPnbWzT2BdIG6XfF0hzCxq0KMoYpg4cAekKijty2txRgNkySIjTWLA==
+vueuc@^0.4.24:
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/vueuc/-/vueuc-0.4.24.tgz#16b2ef68f19f711da81bea83a7dd37d480ee2d6c"
+  integrity sha512-AocMRepM9x78GOZi6m/1WLHfarwtNbMQeFl4N/XQoft5iewUq0x2Tw/F0CbxMSrCVSKgBas47tZFabp4kYADmQ==
   dependencies:
     css-render "^0.15.7"
     evtd "^0.2.2"
